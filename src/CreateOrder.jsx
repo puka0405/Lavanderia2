@@ -232,6 +232,39 @@ const CreateOrder = () => {
                             </div>
                         ))
                     }
+                    <hr />
+                    <h2 variant="info" className="bg-primary">Resumen del Pedido</h2>
+                    <hr />
+                    {
+                        order.garments?.map((garment, i) => (
+                            <div>
+                                <Row>
+                                    <Col>
+                                        <strong>Prenda {i + 1}: {garment.type}</strong>
+                                        {garment.description && <p>Descripción: {garment.description}</p>}
+                                        {garment.observations && <p>Observaciones: {garment.observations}</p>}
+                                    </Col>
+                                    <Col>
+                                        <strong>Servicios:</strong>
+                                        {
+                                            garment.services.map((service, is) => (
+                                                <div>
+                                                    <Row>
+                                                        <Col>{service.name}</Col>
+                                                        <Col>Cantidad: {service.quantity || 0}</Col>
+                                                        <Col>Precio: ${service.unitPrice || 0}</Col>
+                                                        <Col>Total: ${(service.quantity || 0) * (service.unitPrice || 0)}</Col>
+                                                    </Row>
+                                                </div>
+                                            ))
+                                        }
+                                    </Col>
+                                </Row>
+                                <hr />
+                            </div>
+                        ))
+                    }
+
                     <h2>Total: {total}</h2>
 
                     <Button onClick={calculateTotal}>Tolal</Button>
