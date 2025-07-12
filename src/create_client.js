@@ -14,7 +14,7 @@ export default function CreateClientView() {
     <Container className="d-flex justify-content-center align-items-center min-vh-100">
       <Card style={{ width: '100%', maxWidth: '400px' }}>
         <Card.Body>
-          <Card.Title className="text-center mb-4">Crear Cliente</Card.Title>
+          <Card.Title className="text-center mb-4">Crear cliente</Card.Title>
 
           <Form>
             <Form.Group className="mb-3">
@@ -28,7 +28,7 @@ export default function CreateClientView() {
             </Form.Group>
 
             <Form.Group className="mb-3">
-              <Form.Label>Correo Electrónico</Form.Label>
+              <Form.Label>Correo electrónico</Form.Label>
               <Form.Control
                 type="email"
                 placeholder="Ingresa el correo electrónico"

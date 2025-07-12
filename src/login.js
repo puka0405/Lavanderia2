@@ -21,11 +21,11 @@ export default function LoginView() {
     <Container className="d-flex justify-content-center align-items-center min-vh-100">
       <Card style={{ width: '100%', maxWidth: '400px' }}>
         <Card.Body>
-          <Card.Title className="text-center mb-4">🔐 Iniciar Sesión</Card.Title>
+          <Card.Title className="text-center mb-4">Iniciar Sesión</Card.Title>
           
           {showAlert && (
             <Alert variant="danger" className="mb-3">
-              ❌ Usuario o contraseña incorrectos
+              Usuario o contraseña incorrectos
             </Alert>
           )}
 
@@ -52,7 +52,7 @@ export default function LoginView() {
 
             <div className="d-grid">
               <Button variant="primary" onClick={handleLogin}>
-                🚀 Entrar
+                Entrar
               </Button>
             </div>
           </Form>

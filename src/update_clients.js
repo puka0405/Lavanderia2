@@ -12,8 +12,6 @@ export default function UpdateClientView() {
 
   const handleUpdate = () => {
     console.log('Cliente actualizado:', { name, email });
-    // Aquí puedes agregar lógica para actualizar en la base de datos
-    // navigate('/client-list'); // Redirigir después de actualizar
   };
 
   const handleCancel = () => {
@@ -24,7 +22,7 @@ export default function UpdateClientView() {
     <Container className="d-flex justify-content-center align-items-center min-vh-100">
       <Card style={{ width: '100%', maxWidth: '400px' }}>
         <Card.Body>
-          <Card.Title className="text-center mb-4">✏️ Actualizar Cliente</Card.Title>
+          <Card.Title className="text-center mb-4">Actualizar Cliente</Card.Title>
           
           <Form>
             <Form.Group className="mb-3">
@@ -51,14 +49,14 @@ export default function UpdateClientView() {
               <Col>
                 <div className="d-grid">
                   <Button variant="success" onClick={handleUpdate}>
-                    💾 Guardar Cambios
+                    Guardar Cambios
                   </Button>
                 </div>
               </Col>
               <Col>
                 <div className="d-grid">
                   <Button variant="secondary" onClick={handleCancel}>
-                    ❌ Cancelar
+                    Cancelar
                   </Button>
                 </div>
               </Col>

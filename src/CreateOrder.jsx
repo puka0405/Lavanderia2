@@ -3,7 +3,6 @@ import { Button, Col, Container, Row, Form, Card, CloseButton } from 'react-boot
 import Contants from "./Contants";
 import { useNavigate } from 'react-router-dom';
 
-//import { BsFillTrash3Fill } from "react-icons/bs";
 const { services, garments } = Contants;
 
 const CreateOrder = () => {
@@ -102,11 +101,11 @@ const CreateOrder = () => {
     <Container className='mx-auto mt-5'>
             <Card>
                 <Card.Body>
-                    <Card.Title>Creación de Orden</Card.Title>
+                    <Card.Title>Creación de orden</Card.Title>
                     <hr></hr>
                     <Row>
                         <Col>
-                            <Button onClick={addGarment}>Agregar Prenda</Button>
+                            <Button onClick={addGarment}>Agregar prenda</Button>
                         </Col>
                     </Row>
                     <h2>Prendas:</h2>
@@ -124,7 +123,6 @@ const CreateOrder = () => {
                                 <Row>
                                     <Col>
                                         <Form>
-                                            {/* Fila para tipo y descripcion */}
                                             <h4>#{i + 1}</h4>
                                             <Row>
 
@@ -264,9 +262,7 @@ const CreateOrder = () => {
                             </div>
                         ))
                     }
-
                     <h2>Total: {total}</h2>
-
                     <Button onClick={calculateTotal}>Tolal</Button>
                     <Button onClick={() => navigate('/App')}>Resumen</Button>
 

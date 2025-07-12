@@ -12,32 +12,31 @@ function FullClientModuleView() {
     }, []);
 
     const getClient = () => {
-        //Peticion a DB
         const client = [
             {
                 
-                name: "Maria",
-                phone_number: "4498765432",
-                address:"VillasYork"
+                name: "Ana",
+                phone_number: "4498056955",
+                address:"Pozo"
 
             },
             {
                 
-                name: "Salvador",
-                phone_number: "4498765432",
-                address:"PensadoresYork"
+                name: "Paula",
+                phone_number: "4498056956",
+                address:"Cartagena"
             },
             {
                 
-                name: "Juan",
-                phone_number: "4498765432",
-                address:"Londres"
+                name: "Helder",
+                phone_number: "4495535379",
+                address:"Soberana"
             },
             {
                 
-                name: "Luis",
-                phone_number: "4498765432",
-                address:"Inglaterra"
+                name: "Abner",
+                phone_number: "4495535378",
+                address:"Valle"
             }
         ];
         setClients(client);
@@ -49,20 +48,20 @@ function FullClientModuleView() {
       <Container className="justify-content-center align-items-center">
         <Card className="mt-4">
           <Card.Body>
-            <Card.Title className="mb-4 text-center">📋 Lista de Clientes</Card.Title>
+            <Card.Title className="mb-4 text-center">Lista de Clientes</Card.Title>
 
             <InputGroup className="mb-4">
               <Form.Control
-                placeholder="🔍 Buscar por nombre o teléfono" />
-              <Button variant="success" >🔍 Buscar</Button>
+                placeholder="Buscar por nombre o teléfono" />
+              <Button variant="success" >Buscar</Button>
             </InputGroup>
 
             <Table striped bordered hover className="mt-3">
               <thead>
                 <tr>
-                  <th>📛 Nombre</th>
-                  <th>📞 Teléfono</th>
-                  <th>🏠 Dirección</th>
+                  <th>Nombre</th>
+                  <th>Teléfono</th>
+                  <th>Dirección</th>
                 </tr>
               </thead>
               <tbody>
@@ -76,10 +75,10 @@ function FullClientModuleView() {
                                 <td>
                                     <Row className='text-center'>
                                         <Col>
-                                            <Button onClick={() => navigate('/update-client', {state:client})}>✏ Editar </Button>
+                                            <Button onClick={() => navigate('/update-client', {state:client})}>Editar </Button>
                                         </Col>
                                         <Col>
-                                            <Button variant='danger' type='delete' > 🗑Eliminar </Button>
+                                            <Button variant='danger' type='delete' > Eliminar </Button>
                                         </Col>
                                     </Row>
                                 </td>

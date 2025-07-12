@@ -13,7 +13,7 @@ export default function CreateUserView() {
     <Container className="d-flex justify-content-center align-items-center min-vh-100">
       <Card style={{ width: '100%', maxWidth: '400px' }}>
         <Card.Body>
-          <Card.Title className="text-center mb-4">👤 Crear Usuario</Card.Title>
+          <Card.Title className="text-center mb-4">Crear Usuario</Card.Title>
           
           <Form>
             <Form.Group className="mb-3">
@@ -38,7 +38,7 @@ export default function CreateUserView() {
 
             <div className="d-grid">
               <Button variant="primary" onClick={handleCreate}>
-                ✅ Registrar
+                Registrar
               </Button>
             </div>
           </Form>

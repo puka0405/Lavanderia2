@@ -8,13 +8,11 @@ import './index.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import reportWebVitals from './reportWebVitals';
 import CreateOrder from './CreateOrder';
-/* import App from './App'; */
 import ClientView from './create_client';
 import UserView from './create_user';
 import FullView from './full_clients';
 import Update from './update_clients';
 import Login  from './login';
-/* import GarmentView from './Garments'; */
 
 
 const router = createBrowserRouter([
@@ -43,14 +41,6 @@ const router = createBrowserRouter([
     path: '/orden',
     element: <CreateOrder />,
   },
-/*   {
-    path: '/alta',
-    element: <GarmentView />,
-  }, */
- /* {
-    path: '/App',
-    element: <App />,
-  }, */
 
 ]);
 
