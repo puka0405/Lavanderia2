@@ -8,12 +8,12 @@ function Services() {
 
   const crear = () => {
     if (nuevo === '') return;
-    setServicios([servicios, { id: Date.now(), nombre: nuevo }]);
+    setServicios([...servicios, { id: Date.now(), nombre: nuevo }]);
     setNuevo('');
   };
 
   const eliminar = (id) => {
-    setServicios(servicios.filter(servicios => servicios.id !== id));
+    setServicios(servicios.filter(services => services.id !== id));
   };
 
   const editar = (id, nombre) => {
@@ -22,7 +22,7 @@ function Services() {
   };
 
   const guardar = () => {
-    setServicios(servicios.map(servicios => servicios.id === editando ? {servicios, nombre: textoEditar } : servicios));
+    setServicios(servicios.map(services => services.id === editando ? { ...services, nombre: textoEditar } : services));
     setEditando(null);
     setTextoEditar('');
   };
@@ -34,20 +34,20 @@ function Services() {
       <button onClick={crear}>Crear nuevo</button>
 
       <ul>
-        {servicios.map(servicios => (
-          <li key={servicios.id}>
-            {editando === servicios.id ? (
+        {servicios.map(services => (
+          <li key={services.id}>
+            {editando === services.id ? (
               <>
                 <input value={textoEditar} onChange={(e) => setTextoEditar(e.target.value)} />
                 <button onClick={guardar}>Guardar</button>
               </>
             ) : (
               <>
-                {servicios.nombre}
-                <button onClick={() => editar(servicios.id, servicios.nombre)}>Editar</button>
+                {services.nombre}
+                <button onClick={() => editar(services.id, services.nombre)}>Editar</button>
               </>
             )}
-            <button onClick={() => eliminar(servicios.id)}>Eliminar</button>
+            <button onClick={() => eliminar(services.id)}>Eliminar</button>
           </li>
         ))}
       </ul>

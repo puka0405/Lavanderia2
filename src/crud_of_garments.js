@@ -8,7 +8,7 @@ function Garments() {
 
   const crear = () => {
     if (nueva === '') return;
-    setPrendas([prendas, { id: Date.now(), nombre: nueva }]);
+    setPrendas([...prendas, { id: Date.now(), nombre: nueva }]);
     setNueva('');
   };
 
@@ -22,7 +22,7 @@ function Garments() {
   };
 
   const guardar = () => {
-    setPrendas(prendas.map(prenda => prenda.id === editando ? {prenda, nombre: textoEditar } : prenda));
+    setPrendas(prendas.map(prenda => prenda.id === editando ? { ...prenda, nombre: textoEditar } : prenda));
     setEditando(null);
     setTextoEditar('');
   };
@@ -31,7 +31,7 @@ function Garments() {
     <div>
       <h3>Prendas</h3>
       <input value={nueva} onChange={(e) => setNueva(e.target.value)} />
-      <button onClick={crear}>Crear nuevo</button>
+      <button onClick={crear}>Agregar</button>
 
       <ul>
         {prendas.map(prenda => (
