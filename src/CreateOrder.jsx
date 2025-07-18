@@ -66,7 +66,7 @@ const CreateOrder = () => {
     const deleteServiceToGarment = (ig , is) => {
         const data = order;
         if (data.garments && data.garments[ig]) {
-            data.garments[ig].services = data.garments[ig].services.filter((_, i) => i != is)
+            data.garments[ig].services = data.garments[ig].services.filter((_, i) => i !== is)
         }
         setOrder({ ...data })
     }
@@ -74,7 +74,7 @@ const CreateOrder = () => {
     const deleteGarment = (ig) => {
         const data = order;
         if (data.garments && data.garments[ig]) {
-            data.garments = data.garments.filter((_, i) => i != ig)
+            data.garments = data.garments.filter((_, i) => i !== ig)
         }
         setOrder({ ...data })
     }
@@ -89,7 +89,7 @@ const CreateOrder = () => {
     const onChangeServiceFields = (key, value, ig, is) => {
         const data = order;
         if (data.garments) {
-            if (key == "name") {
+            if (key === "name") {
                 data.garments[ig].services[is][key] = value
             } else {
                 data.garments[ig].services[is][key] = parseFloat(value)

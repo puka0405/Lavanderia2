@@ -13,6 +13,8 @@ import UserView from './create_user';
 import FullView from './full_clients';
 import Update from './update_clients';
 import Login  from './login';
+import Services from './crud_of_services';
+import Garments from './crud_of_garments';
 
 
 const router = createBrowserRouter([
@@ -40,6 +42,14 @@ const router = createBrowserRouter([
 {
     path: '/orden',
     element: <CreateOrder />,
+  },
+   {
+    path: '/services',
+    element: <Services />,
+  },
+  {
+    path: '/garments',
+    element: <Garments />,
   },
 
 ]);
