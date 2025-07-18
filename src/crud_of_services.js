@@ -31,7 +31,7 @@ function Services() {
     <div>
       <h3>Servicios</h3>
       <input value={nuevo} onChange={(e) => setNuevo(e.target.value)} />
-      <button onClick={crear}>Crear nuevo</button>
+      <button onClick={crear}>Crear nuevo.</button>
 
       <ul>
         {servicios.map(services => (

@@ -31,7 +31,7 @@ function Garments() {
     <div>
       <h3>Prendas</h3>
       <input value={nueva} onChange={(e) => setNueva(e.target.value)} />
-      <button onClick={crear}>Agregar</button>
+      <button onClick={crear}>Crear nuevo</button>
 
       <ul>
         {prendas.map(prenda => (
