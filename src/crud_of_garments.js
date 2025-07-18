@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { button } from 'react-bootstrap';
+
 
 function Garments() {
   const [prendas, setPrendas] = useState([]);
